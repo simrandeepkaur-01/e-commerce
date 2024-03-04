@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and confirm your order details on our order summary page.">
+    <meta name="keywords" content="order summary, confirmation, purchase details">
+
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+
+<body class="bg-gray-200">
+    <main>
+        <section class="w-8/12 mx-auto bg-white p-4 pb-0 rounded-md shadow-md mt-12">
+            <header class="space-y-3 border-b pb-2">
+                <h1 class="text-indigo-600 font-medium">Payment successful</h1>
+                <h2 class="text-5xl font-semibold">Thanks for ordering</h2>
+                <dl class="flex gap-2">
+                    <dt class=" font-medium">Order Id:</dt>
+                    <dd id="js-orderId" class=" font-medium"></dd>
+                </dl>
+                <p class="text-gray-600">We appreciate your order, we&#39;re currently processing it. So hang tight
+                    and we&#39;ll send
+                    you
+                    confirmation very soon!</p>
+            </header>
+            <div class="bg-gray-50 px-6 py-6 space-y-6">
+                <ul id="js-productsListing" class="divide-y divide-gray-300"></ul>
+                <footer class=" border-t border-gray-200 space-y-4">
+                    <p class="flex items-center justify-between gap-3 text-lg font-medium mt-5">Total Amount
+                        <span id="js-totalAmount">$272.52</span>
+                    </p>
+                    <div class="flex items-center justify-between gap-52 flex-wrap py-6">
+                        <div class="flex-1 space-y-2">
+                            <h3 class="font-medium">Shipping address</h3>
+                            <address id="js-address" class="text-gray-600"></address>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Payment information</h3>
+                            <p id="js-paymentInfo" class="text-gray-600"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="py-4">
+                        <a href="http://127.0.0.1:5501/src/javascript/tasks/ecommerce/"
+                            class="text-indigo-600 font-medium flex items-center justify-end gap-1">Continue
+                            Shopping
+                            <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script src="orderSummary.js" defer></script>
+</body>
+
+</html>

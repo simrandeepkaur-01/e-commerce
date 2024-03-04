@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop for products and complete your payment securely on our platform.">
+    <meta name="keywords" content="cart, shopping, online shopping, checkout">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="../../dist/output.css">
+</head>
+
+<body class="bg-gray-200 grid  lg:grid-cols-5 w-11/12 mx-auto py-12 gap-8">
+    <section class="lg:col-span-3">
+        <!-- CART PRODUCTS -->
+        <ul id="js-products" class="bg-white  divide-y divide-gray-200 shadow-md shadow-gray-400 rounded-md">
+        </ul>
+    </section>
+
+    <section class="lg:col-span-2">
+        <!-- PRICE DETAILS -->
+        <article id="js-priceDetails"
+            class="divide-y bg-white divide-gray-400 shadow-md shadow-gray-400 mb-4 rounded-md "></article>
+
+        <form action="#" id="js-user" class="bg-white shadow-md shadow-gray-400 rounded-md p-4">
+            <div class="grid gap-x-5  md:grid-cols-2">
+                <!-- First Name -->
+                <div class=" h-24">
+                    <label for="js-firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
+                        name</label>
+                    <input type="text" id="js-firstName" name="firstName"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="John" autocomplete="off">
+                    <p id="js-errorFirstName" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+
+                <!-- Last Name -->
+                <div class=" h-24">
+                    <label for="js-lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
+                        name</label>
+                    <input type="text" id="js-lastName" name="lastName"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Doe" autocomplete="off">
+                    <p id="js-errorLastName" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+
+                <!-- City -->
+                <div class=" h-24">
+                    <label for="js-city"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+                    <input type="text" id="js-city" name="city"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Jaipur" autocomplete="off">
+                    <p id="js-errorCity" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+
+                <!-- State -->
+                <div class=" h-24">
+                    <label for="js-state"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
+                    <input type="text" id="js-state" name="state"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Rajasthan" autocomplete="off">
+                    <p id="js-errorState" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+
+                <!-- Zip -->
+                <div class=" h-24">
+                    <label for="js-zip" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Zip</label>
+                    <input type="text" id="js-zip" name="zip"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="789***" autocomplete="off">
+                    <p id="js-errorZip" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+
+                <!-- Phone Number -->
+                <div class=" h-24">
+                    <label for="js-phone"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+                    <input type="tel" id="js-phone" name="phone"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="9452******" autocomplete="off">
+                    <p id="js-errorPhone" class="-bottom-5 left-2 text-red-500 text-sm font-medium"></p>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class=" h-28">
+                <label for="js-address"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+                <textarea id="js-address" name="address"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                <p id="js-errorAddress" class="-bottom-5 left-2 text-red-500 text-sm font-medium">
+                </p>
+            </div>
+
+            <button id="rzp-button1" type="submit"
+                class="bg-blue-600 text-white py-2 w-full rounded-md text-lg font-semibold">Proceed To Pay</button>
+        </form>
+    </section>
+
+    <script src="checkout.js" defer></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+    <script src="payment.js" defer></script>
+</body>
+
+</html>

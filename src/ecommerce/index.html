@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our wide range of products, including electronics, clothing, and more. Find the perfect items for your needs.">
+    <meta name="keywords" content="products, electronics, clothing, online shopping, ecommerce">
+
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.0/viewer.min.css">
+</head>
+ 
+<body class="bg-gray-100">
+    <!-- header -->
+    <header class="mb-20">
+        <!-- Navigation Bar -->
+        <nav class=" bg-[#2370f4] flex items-center dark:bg-indigo-800 fixed w-full top-0 left-0 z-20 py-4">
+            <ul class="flex justify-around w-full flex-wrap gap-4 px-2">
+                <!-- logo -->
+                <li class="hidden md:flex flex-col ">
+                    <img width="75"
+                        src="	https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                        alt="Flipkart" title="Flipkart"><a
+                        class="text-white italic flex w-4 h-4 items-center space-x-1">Explore
+                        <span class="text-[#ffe11b] ml-0.5">Plus</span>
+                        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
+                            alt="Flipkart-plus"></a>
+                </li>
+
+                <!-- search bar -->
+                <li class="w-[550px] relative ">
+                    <input id="js-searchInput"
+                        class="mx-auto w-full rounded-lg p-1.5 px-3 text-lg dark:bg-gray-300 placeholder:text-gray-400 dark:placeholder:text-gray-700 "
+                        type="search" placeholder="Search For Products, Brands and More" autocomplete="off">
+                    <span>
+                        <svg class="w-6 h-6 absolute top-1/2 bg-white right-3 -translate-y-1/2 text-[#2874f0] dark:text-indigo-800"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+
+                    <!-- search List -->
+                    <ul id="js-searchList"
+                        class="mx-auto w-[550px] max-h-[360px] bg-white dark:bg-gray-200 overflow-hidden rounded-lg mt-1 absolute shadow-md shadow-gray-400  focus:outline-none">
+                    </ul>
+                </li>
+
+                <!-- cart -->
+                <li class="flex gap-2 justify-center items-center relative">
+                    <a href="checkout.html" class="absolute inset-0 z-20"></a>
+                    <div class="relative">
+                        <svg class="w-7 h-7 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                            fill="currentColor">
+                            <path
+                                d="M220.61,60.16A6,6,0,0,0,216,58H53L47.83,29.5A14,14,0,0,0,34.05,18H16a6,6,0,0,0,0,12h18a2,2,0,0,1,2,1.64l25.51,140.3a21.93,21.93,0,0,0,6.24,11.77A26,26,0,1,0,105.89,190h52.22A26,26,0,1,0,180,178H83.17a10,10,0,0,1-9.84-8.21L69.73,150H188.1a22,22,0,0,0,21.65-18.06L221.9,65.07A6,6,0,0,0,220.61,60.16ZM98,204a14,14,0,1,1-14-14A14,14,0,0,1,98,204Zm96,0a14,14,0,1,1-14-14A14,14,0,0,1,194,204Zm3.94-74.21A10,10,0,0,1,188.1,138H67.55L55.19,70H208.81Z">
+                            </path>
+                        </svg>
+
+                        <span id="js-cartCount"
+                            class="px-1 w-6 h-6 absolute -top-3 -right-1 flex items-center justify-center rounded-full  bg-red-500 text-white">0</span>
+                    </div>
+                    <span class="hidden md:block md:text-white md:text-lg">Cart</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="min-h-screen relative pb-16">
+        <section>
+            <!-- Product Listing -->
+            <ul id="js-products" class="p-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
+            </ul>
+        </section>
+
+        <!-- pagination buttons -->
+        <div class="absolute bottom-0 w-full flex justify-center items-center gap-2 bg-white">
+            <!-- previous button -->
+            <button id="js-previousBtn" class=" bg-blue-100 rounded-full h-fit shadow-lg shadow-gray-300"><svg
+                    class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <polyline fill="none" stroke="currentColor" stroke-width="2" points="9 6 15 12 9 18"
+                        transform="matrix(-1 0 0 1 24 0)"></polyline>
+                </svg>
+            </button>
+            <!-- pages -->
+            <div id="js-btnContainer" class="flex  py-6  gap-1 "></div>
+            <!-- next button -->
+            <button id="js-nextBtn" class="bg-blue-100 rounded-full h-fit shadow-lg shadow-gray-300"><svg
+                    class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path
+                        d="M9.31 6.71c-.39.39-.39 1.02 0 1.41L13.19 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.72 6.7c-.38-.38-1.02-.38-1.41.01z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="bg-black bg-opacity-90 text-white text-sm flex justify-around py-6">
+            <div><a href="#" aria-label="Become A Seller">Become a Seller</a></div>
+            <div><a href="#" aria-label="Advertise">Advertise</a></div>
+            <div><a href="#" aria-label="Gift Cards">Gift Cards</a></div>
+            <div><a href="#" aria-label="Help Center">Help Center</a></div><span>©
+                2007-2023<span>Flipkart.com</span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.0/viewer.min.js"></script>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
